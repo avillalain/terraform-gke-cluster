@@ -1,0 +1,21 @@
+name: preemptible-node-pool
+title: Baseline gke node pool control with preemptible VMs
+summary: Baseline controls for a zonal cluster node pool with preemptible VMs
+license: MIT
+depends:
+  - name: cluster-baseline
+    path: ../cluster-baseline
+  - name: node-pool-baseline
+    path: ../node-pool-baseline
+  - name: outputs
+    path: ../outputs
+attributes:
+  - name: source_node_pools
+    required: true
+    type: any
+  - name: source_cluster
+    required: true
+    type: any
+  - name: project_id
+    required: true
+    type: string

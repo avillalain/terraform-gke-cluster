@@ -1,0 +1,16 @@
+name: regional-cluster
+title: Provision a single regional gke cluster
+summary: Provisions a single regional gke public cluster with sensible defaults
+license: MIT
+depends:
+  - name: cluster-baseline
+    path: ../cluster-baseline
+  - name: outputs
+    path: ../outputs
+attributes:
+  - name: project_id
+    required: true
+    type: string
+  - name: source_cluster
+    required: true
+    type: any

@@ -1,0 +1,14 @@
+name: output
+title: Base controls for terraform module outputs
+summary: Check for output consistency
+license: MIT
+attributes:
+  - name: service_account
+    required: true
+    type: any
+  - name: cluster
+    required: true
+    type: any
+  - name: node_pools
+    required: true
+    type: any

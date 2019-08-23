@@ -1,0 +1,17 @@
+name: baseline-node-pool
+title: Baseline gke node pool control
+summary: Baseline controls for a zonal cluster node pool
+license: MIT
+attributes:
+  - name: source_node_pools
+    required: true
+    type: any
+  - name: source_cluster
+    required: true
+    type: any
+  - name: project_id
+    required: true
+    type: string
+  - name: source_service_account
+    required: true
+    type: any

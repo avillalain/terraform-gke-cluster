@@ -1,0 +1,17 @@
+name: istio-cluster
+title: Provision a gke cluster with istio enabled
+summary: Provisions a single zonal cluster with istio enabled
+license: MIT
+depends:
+  - name: cluster-baseline
+    path: ../cluster-baseline
+  - name: outputs
+    path: ../outputs
+attributes:
+  - name: project_id
+    required: true
+    type: string
+  - name: source_cluster
+    required: true
+    type: any
+    

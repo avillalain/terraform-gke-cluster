@@ -1,0 +1,17 @@
+name: cloud-run-cluster
+title: Provision a gke cluster with cloud run enabled
+summary: Provisions a single zonal cluster with cloud run enabled
+license: MIT
+depends:
+  - name: cluster-baseline
+    path: ../cluster-baseline
+  - name: outputs
+    path: ../outputs
+attributes:
+  - name: project_id
+    required: true
+    type: string
+  - name: source_cluster
+    required: true
+    type: any
+    

@@ -1,0 +1,119 @@
+driver:
+  name: terraform
+  command_timeout: 1800
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: local
+
+suites:
+  - name: zonal_cluster_with_default_pool
+    driver:
+      root_module_directory: test/fixtures/zonal_cluster_with_default_pool
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-zonal-cluster
+            - gcloud-cluster-baseline
+            - service-account-output
+            - cluster-output
+  - name: regional_cluster_with_default_pool
+    driver:
+      root_module_directory: test/fixtures/regional_cluster_with_default_pool
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-regional-cluster
+            - gcloud-cluster-baseline
+            - service-account-output
+            - cluster-output
+  - name: cluster_with_istio_enabled
+    driver:
+      root_module_directory: test/fixtures/cluster_with_istio_enabled
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-istio-cluster
+            - gcloud-cluster-baseline
+            - service-account-output
+            - cluster-output
+  - name: cluster_with_cloud_run_enabled
+    driver:
+      root_module_directory: test/fixtures/cluster_with_cloud_run_enabled
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-cloud-run-cluster
+            - gcloud-cluster-baseline
+            - service-account-output
+            - cluster-output
+  - name: cluster_with_binary_authorization_enabled
+    driver:
+      root_module_directory: test/fixtures/cluster_with_binary_authorization_enabled
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-bin-auth-cluster
+            - gcloud-cluster-baseline
+            - service-account-output
+            - cluster-output
+  - name: cluster_with_stackdriver_kubernetes_monitoring
+    driver:
+      root_module_directory: test/fixtures/cluster_with_stackdriver_kubernetes_monitoring
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-stackdriver-engine-cluster
+            - gcloud-cluster-baseline
+            - service-account-output
+            - cluster-output
+  - name: cluster_with_node_pool
+    driver:
+      root_module_directory: test/fixtures/cluster_with_node_pool
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-node-pool
+            - gcloud-node-pool-baseline
+            - gcloud-cluster-baseline
+            - service-account-output
+            - node-pools-output
+            - cluster-output
+  - name: cluster_with_preemptible_nodes
+    driver:
+      root_module_directory: test/fixtures/cluster_with_preemptible_nodes
+    verifier:
+      name: terraform
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - gcloud-preemptible-node-pool
+            - gcloud-node-pool-baseline
+            - gcloud-cluster-baseline
+            - service-account-output
+            - node-pools-output
+            - cluster-output

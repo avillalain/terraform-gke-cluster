@@ -1,0 +1,23 @@
+name: baseline-cluster
+title: Baseline gke controls
+summary: Baseline controls for a zonal cluster
+license: MIT
+attributes:
+  - name: project_id
+    required: true
+    type: string
+  - name: network_name
+    required: true
+    type: string
+  - name: subnetwork_name
+    required: true
+    type: string
+  - name: source_cluster
+    required: true
+    type: any
+  - name: source_node_pools
+    required: true
+    type: any
+  - name: source_service_account
+    required: true
+    type: any

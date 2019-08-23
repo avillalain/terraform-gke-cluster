@@ -1,0 +1,26 @@
+#  Local terraform files
+**/.terraform/*
+**/terraform.tfstate.d
+*.tfstate
+*.tfstate.*
+
+# IDE folders
+**/.idea/*
+**/.vscode
+
+# Local kitchen directories and files
+**/.kitchen/*
+.kitchen.local.yml
+
+# Local bundler directories
+**/.bundle/*
+**/bin/
+
+# Miscellaneous files
+*.swp
+.DS_Store
+
+# Ruby files
+**/.bundle
+**/bin
+Gemfile.lock
