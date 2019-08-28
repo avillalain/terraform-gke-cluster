@@ -285,6 +285,6 @@ Everyone is welcome to collaborate and propose ideas. In fact I would love to he
 - Add ip masq
 - Add tiller/helm
 - Add support for private master nodes with no public access
-- Change `Istio` Authentication paramters to be more descriptive rather than using the GCP provider strings
+- Change `Istio` Authentication paramaters to be more descriptive rather than using the GCP provider strings
 - Remove extra objects.
-- Be able to delete all resources created. When creating a cluster, when istio is enabled a number of firewall rules are created and never delete if the cluster is deleted.
+- Be able to delete all resources created. When creating a cluster, and istio is enabled, a number of firewall rules are created and never delete if the cluster is deleted.
